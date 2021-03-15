@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 ############################################################
 # HTML, CSS, JS Minifier CLI Tool
 # Copyright GrayWasTaken.club 2021
@@ -25,17 +26,17 @@ class c:
 
 def help():
   width = int(os.popen('stty size', 'r').read().split()[1])
-  if width > 130: width = 130
+  if width > 100: width = 100
   print(c.o+"="*width)
   print(f"HTML, CSS, JS Minifier v{__version__}".center(width))
   print(f"Author: {__author__} | Website: https://lambda.black/ | license: {__license__}".center(width))
   
   print(f"\n{c.o}Usage:")
-  print(f"\t{c.y}$ minifier <html/css/javascript file>\n\t\t{c.b}Minifies a single html, css, or javascript file.\n\t\t\t{c.c}minifier -r /var/www/index.html")
+  print(f"  {c.y}$ minifier <html/css/javascript file>\n    {c.b}Minifies a single html, css, or javascript file.\n      {c.c}minifier -r /var/www/index.html")
   print(f"\n{c.o}Flags:")
-  print(f"\t{c.y}-h, --help, help\n\t\t{c.b}Prints this help screen.{c.c}\n\t\tUsage: minifier -h")
-  print(f"\t{c.y}-r <path to folder>\n\t\t{c.b}Minifies all files ending with .css, .html, and .js recursively.{c.c}\n\t\tUsage: minifier -r some/folder")
-  print(f"\t{c.y}-i <string>\n\t\t{c.b}Ignores files and folders that match the string submitted.{c.c}\n\t\tUsage: minifier -r /var/www/ -i ignoreFolder")
+  print(f"  {c.y}-h, --help, help\n    {c.b}Prints this help screen.{c.c}\n    Usage: minifier -h")
+  print(f"  {c.y}-r <path to folder>\n    {c.b}Minifies all files ending with .css, .html, and .js recursively.{c.c}\n    Usage: minifier -r some/folder")
+  print(f"  {c.y}-i <string>\n    {c.b}Ignores files and folders that match the string submitted.{c.c}\n    Usage: minifier -r /var/www/ -i ignoreFolder")
   print(c.o+"="*width)
 
 
